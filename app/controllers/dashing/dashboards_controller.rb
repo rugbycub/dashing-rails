@@ -11,6 +11,7 @@ module Dashing
 
     def show
       render file: dashboard_path(params[:name]), layout: Dashing.config.dashboard_layout_path
+      preload_city_dashboard(params[:city])
     end
 
     private
@@ -20,7 +21,7 @@ module Dashing
     end
 
     def dashboard_path(name)
-      Dashing.config.dashboards_views_path.join(name)
+      Dashing.config.dashboards_views_path.call.join(name)
     end
 
     def template_not_found

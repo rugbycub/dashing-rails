@@ -18,6 +18,10 @@ A huge thanks to Shopify for their great work with the Sinatra version.
 
 Dashing is a Rails engine that lets you build beautiful dashboards.
 
+[Click here for a video tutorial on how to use this gem:](http://devcasts.co/dashing-rails-making-dashingly-handsome-dashboards/)
+
+[![dashing-rails-devcast](http://devcasts.co/wp-content/uploads/2014/03/dashing-rails.png)](http://devcasts.co/dashing-rails-making-dashingly-handsome-dashboards/)
+
 Check out a demo over [here](http://dashingdemo.herokuapp.com/sample). [Here's another one](http://dashingdemo.herokuapp.com/sampletv), optimized for 1080p screens.
 
 Key features:
@@ -40,45 +44,45 @@ Key features:
 
 1. Install the gem by adding the following in your `Gemfile`:
 
-  ```ruby
-  gem 'dashing-rails'
-  ```
+```ruby
+gem 'dashing-rails'
+```
 
 2. Install puma server by adding the following in your `Gemfile`:
 
-  ```ruby
-  gem 'puma'
-  ```
+```ruby
+gem 'puma'
+```
 
 3. Bundle install
 
-  ```
-  $ bundle
-  ```
+```
+$ bundle
+```
 
 4. Install the dependencies using the following command:
 
-  ```
-  $ rails g dashing:install
-  ```
+```
+$ rails g dashing:install
+```
 
 5. Start redis server:
 
-  ```
-  $ redis-server
-  ```
+```
+$ redis-server
+```
 
 6. Open `config/environments/development.rb` and add:
 
-  ```ruby
-  config.allow_concurrency = true
-  ```
+```ruby
+config.allow_concurrency = true
+```
 
 7. Start your server (must be a multi threaded server - See [Requirements](https://github.com/gottfrois/dashing-rails#requirements))
 
-  ```
-  $ rails s
-  ```
+```
+$ rails s
+```
 
 8. Point your browser at [http://localhost:3000/dashing/dashboards](http://localhost:3000/dashing/dashboards) and have fun!
 

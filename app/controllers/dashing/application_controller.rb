@@ -1,6 +1,6 @@
 module Dashing
   class ApplicationController < ActionController::Base
-
+    include ApplicationHelper
     before_filter :authentication_with_devise
 
     private
